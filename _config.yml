@@ -22,7 +22,7 @@ inc:
   # Comments
   disqus:
     # Eg. "exampleblog" Set to false to disable comments
-    shortname:  false
+    shortname:  agileiowa
   
   # Sharing settings
   sharing:
