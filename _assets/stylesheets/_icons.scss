@@ -30,6 +30,17 @@
     height:14px;
 }
 
+.icon-pinterest {
+    background-image:url('/images/icon/pinterest.png');
+    background-size:15px;
+    background-position:1px 1px;
+    width:15px;
+    height:15px;
+}
+
+.icon-pinterest.black {
+    background-position:1px -15px;
+}
 .icon-rss.black {
     background-position:1px -11px;
 }
