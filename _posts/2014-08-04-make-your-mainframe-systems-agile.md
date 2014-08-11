@@ -3,7 +3,7 @@ layout: post
 title: "Encore Session - Make Your Mainframe Systems and Technology More Agile"
 event:
   presenter: Jay McFarling and Danielle Roecker
-  eventbrite-id: encore-session-make-your-mainframe-systems-and-technology-more-agile-tickets-125176797
+  eventbrite-id: encore-session-make-your-mainframe-systems-and-technology-more-agile-tickets-12517679717
 ---
 
 Due to demand, Jay and Danielle have offered to perform an encore session of "Make Your Mainframe Systems and Technology More Agile"
