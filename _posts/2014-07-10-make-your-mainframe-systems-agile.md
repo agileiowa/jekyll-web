@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Make Your Mainframe Systems and Technology More Agile"
+category: events
 event:
   presenter: Jay McFarling and Danielle Roecker
   eventbrite-id: make-your-mainframe-systems-and-technology-more-agile-tickets-12245134527
+  date: 2014-07-17
+  time: 6:00 PM to 8:00 PM
 ---
 As the technology industry increasingly shifts to agile development, we’re faced with the challenge of maintaining our mainframe technologies and legacy systems. We must face the challenges of employee engagement and the problems of fitting procedural/linear technologies into the fluid world of agile, but successfully navigating these issues will allow IT leaders to breathe new life into the development of aging technologies. Together, Jay McFarling and Danielle Roecker share their experiences of the past two years as they successfully moved the waterfall development activities of their mainframe legacy systems into the new world of agile. Now Jay and Danielle are not just delivering applications but finding ways to modernize their development practices. This interactive session provides a glimpse into the top five blockers they faced―agile mindset, tools, sizing, communication, and team improvements―and provides a venue for you to explore your issues. Leave with real world examples and the motivation to tackle your biggest agile challenges.
 

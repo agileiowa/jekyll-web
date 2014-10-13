@@ -1,6 +1,10 @@
 ---
 layout: post
 title: April Meeting @ Noon&#58; If Your Focus is Agile, You're Wrong 
+category: events
+event:
+  date: 2014-05-01
+  time: 12:00 PM to 1:00 PM
 ---
 <p>We'll be doing an encore of Matthew's talk downtown this Thursday at noon. Please register to make the security check-in process painless.</p>
 <p><strong>Cost:</strong> Free (Registration is required)</p>

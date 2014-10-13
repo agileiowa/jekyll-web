@@ -1,6 +1,9 @@
 ---
 layout: post
 title: April Meeting - If Your Focus is Agile, You're Wrong
+category: events
+event:
+  date: 2014-04-17
 comments:
 - id: 5280
   author: Jodi Bonnett

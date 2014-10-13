@@ -1,3 +1,30 @@
+.event{
+
+  // Div1 Width + half of Div2's Width ) x 2.
+  min-width: 500px;
+  margin-bottom: 20px;
+   .title{
+    height: 60px;
+   }
+
+  .cal {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid whitesmoke; 
+    margin: 0 30px 0 0;
+    float: left;
+
+    .month {
+      background-color: whitesmoke;
+      height: 30px;
+    }
+
+    .day {
+    }
+  }
+}
+
 article {
     background:#fff;
     padding:60px 0;
