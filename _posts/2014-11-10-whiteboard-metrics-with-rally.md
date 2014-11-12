@@ -5,10 +5,17 @@ event:
   presenter: Doug Dockery, PSM, SPC. - Rally Software
   eventbrite-id: improving-agile-teams-metrics-and-techniques-to-make-your-teams-better-tickets-14175670813
 ---
+**Note: This event has sold out**
 
 **Friday, November 21, 2014 from 9:00 AM to 11:00 AM**
 
 Principal Financial Group
+
+711 High Street (also known as Corporate 1 building)
+
+Room SG3-East
+
+Check in at the reception/security desk on the south side of the building using the public entrance.
 
 <a class="btn" title="EventBrite Registration"
 href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}"
