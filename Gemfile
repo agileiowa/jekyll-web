@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'safe_yaml', '~>1.0.4'
 gem 'jekyll'
 gem 'jekyll-assets'
 gem 'maruku'
