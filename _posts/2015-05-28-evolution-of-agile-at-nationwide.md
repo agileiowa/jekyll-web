@@ -19,13 +19,14 @@ event:
     instructions: Check in at the 2nd floor security desk which is accessible from the building front entrance or skywalk.
 
   description: Join us for a discussion on Nationwide's journey to Agile and Lean development including where it all started, how we got to where we are today, and what lies ahead.  With over 100 Agile teams in 3 locations, Nationwide has fully embraced a future in Agile development.   
+  slides: brandmeyer-agileIowa-presentation-2015-06-09.pdf
 ---
 **{{page.event.date | date: "%A, %B %-d, %Y" }} from
  {{page.event.time}}**
-
-<a class="btn" title="EventBrite Registration"
-href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}"
-target="_blank">Register on EventBrite</a>
+{% if page.event.slides %}
+  **Download the slides:**
+  [{{page.event.slides}}](p/{{page.event.slides}})
+{% endif %}
 
 **Description**  
 {{page.event.description}}
@@ -45,7 +46,3 @@ target="_blank">Register on EventBrite</a>
   *Additional instructions*: 
   {{page.event.location.instructions}}
 {% endif %}
-
-<a class="btn" title="EventBrite Registration"
-href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}"
-target="_blank">Register on EventBrite</a>
