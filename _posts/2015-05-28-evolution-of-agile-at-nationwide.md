@@ -25,7 +25,7 @@ event:
  {{page.event.time}}**
 {% if page.event.slides %}
   **Download the slides:**
-  [{{page.event.slides}}](p/{{page.event.slides}})
+  [{{page.event.slides}}](/p/{{page.event.slides}})
 {% endif %}
 
 **Description**  
