@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lean Coffee - June"
-category: events
+categories: events leancoffee
 event:
   eventbrite-id: lean-coffee-june-2015-tickets-17362482653 
   date: 2015-06-18

@@ -14,6 +14,17 @@ $accent: #2077b2;
 
 /* IMPORT CSS FILES */
 @import "bootstrap";
+
+$font-size-small: 12px;
+$badge-font-weight: 700;
+$badge-active-color: yellow;
+$badge-color: white;
+$badge-line-height: 1;
+$badge-bg: #54b89d;
+$badge-active-bg: brown;
+$badge-border-radius: 10px;
+$badge-link-hover-color: green;
+@import "badges";
 @import "base";
 @import "nav";
 @import "article";

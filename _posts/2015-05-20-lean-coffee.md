@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "May Meeting - Lean Coffee"
-category: events
+categories: events leancoffee
 event:
   presenter: "Tim Gifford, Lean TECHniques"
   eventbrite-id: lean-coffee-may-2015-tickets-17067181399

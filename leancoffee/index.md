@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  Events 
+title:  Lean Coffee 
 ---
-{% for post in site.categories.events %}
+{% for post in site.categories.leancoffee%}
 <div class="event" data-event-date="{{post.event.date | date: "%Y-%m-%d"}}">
   <div class="cal">
     <div class="month">
