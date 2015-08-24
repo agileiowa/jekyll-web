@@ -3,4 +3,7 @@ jekyll-web
 
 Jekyll version of the agileiowa.org website
 
-[Demo](http://beta.agileiowa.org/)
+== How to publish
+Run `rake site:publish`
+This will generate the site locally and overwrite the gh-pages branch. 
+
