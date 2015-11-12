@@ -24,6 +24,31 @@ task :watch do
   [jekyllPid].each { |pid| Process.wait(pid) }
 end # task :watch
 
+namespace :post do
+  desc "Generate new post"
+  task :generate, :post_title, :date, :time do | t, args |
+    datestamp = Time.now.strftime('%F')
+    post_filename = build_target_filename(datestamp, args[:post_title])
+
+    post_template = File.read('_templates/post-template.md')
+    post = post_template.gsub(/\{\{date\}\}/, args[:date])
+                        .gsub(/\{\{time\}\}/, args[:time])
+                        .gsub(/\{\{title\}\}/, args[:post_title])
+    File.open(post_filename, "w") { | f | f.puts post }
+
+    open_for_editing(post_filename)
+  end
+
+  def build_target_filename(datestamp, title)
+    file_title = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+    "_posts/#{datestamp}-#{file_title}.md"
+  end
+
+  def open_for_editing(post_filename)
+    system "open #{post_filename}" if (/darwin/ =~ RUBY_PLATFORM)
+    system "start #{post_filename}" if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM)
+  end
+end
 namespace :site do
   desc "Generate blog files"
   task :generate do
