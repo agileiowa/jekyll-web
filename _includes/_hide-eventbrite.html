@@ -1,0 +1,37 @@
+<script>
+	function RegistrationButtons() {
+		var _registrationLinksSelector = 'a[href^="http://www.eventbrite.com"]';
+		var _eventDateAttribute = 'data-eventdate';
+
+		var _registrationLinks = function() {
+				return $(_registrationLinksSelector);
+		};
+
+		var _isLegacyPage = function() {
+			elementsContainingEventDate = _registrationLinksSelector + '[' + _eventDateAttribute + ']';
+			return $(elementsContainingEventDate).length == 0;
+		};
+
+		var _hideRegistrationLinks = function() {
+			_registrationLinks().hide();
+		};
+
+		var _hideBasedOnEventDate = function() {
+			var eventDate = new Date(_registrationLinks().attr(_eventDateAttribute));
+			var today = new Date();
+
+			if(today >= eventDate) {
+				_hideRegistrationLinks();
+			}
+		};
+
+		this.hideOnceCompleted = function() {
+			if(_isLegacyPage()) {
+				_hideRegistrationLinks();
+			} else {
+				_hideBasedOnEventDate();
+			}
+		};
+	}
+	new RegistrationButtons().hideOnceCompleted();
+</script>
