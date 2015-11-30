@@ -5,7 +5,7 @@ category: events
 event:
   eventbrite-id: december-meeting-no-more-crappy-demos-tickets-19530485207
   date: 2015-12-02
-  time: 11:30 AM - 1:30 PM
+  time: 11:30 AM - 1:00 PM
 #  slides:
 
   presenter:
