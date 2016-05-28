@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lean Coffee - May"
+title: "Lean Coffee - June"
 categories: events leancoffee
 event:
   facebook-id: 
