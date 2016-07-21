@@ -1,10 +1,10 @@
 ---
 layout: post
-title: July Lunch Meeting - Building Better Idiots
+title: August Lunch Meeting - Building Better Idiots
 category: events
 event:
   eventbrite-id: july-lunch-meeting-building-better-idiots-tickets-26649537484 
-  date: 2016-07-21
+  date: 2016-08-09
   time: 11:30 AM - 1:00 PM
   slides: 
 
