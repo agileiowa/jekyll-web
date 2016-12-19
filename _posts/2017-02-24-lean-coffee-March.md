@@ -4,7 +4,7 @@ title: "Lean Coffee - March"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-march-2017-tickets-30447933589
   date: 2017-03-16
   time: 7:00 AM to 8:30 AM
 

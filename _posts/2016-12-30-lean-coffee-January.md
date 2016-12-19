@@ -4,7 +4,7 @@ title: "Lean Coffee - January"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-january-2017-tickets-30447766088
   date: 2017-01-19
   time: 7:00 AM to 8:30 AM
 

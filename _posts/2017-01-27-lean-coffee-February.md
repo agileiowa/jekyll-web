@@ -4,7 +4,7 @@ title: "Lean Coffee - February"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-february-2017-tickets-30447790160
   date: 2017-02-16
   time: 7:00 AM to 8:30 AM
 
