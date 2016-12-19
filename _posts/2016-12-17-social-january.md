@@ -5,7 +5,7 @@ categories: events
 event:
   facebook-id: 
   eventbrite-id: agile-iowa-social-january-2017-tickets-30448066988
-  date: 2016-08-09
+  date: 2017-01-24
   time: 4:30 PM to 8:00 PM
 
   presenter:
