@@ -40,7 +40,9 @@ event:
   {{page.event.location.instructions}}
 {% endif %}
 
+{% if page.event.eventbrite-id %}
 <a class="btn" title="EventBrite Registration"  href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}" target="_blank" data-eventdate="{{page.event.date | date: '%D'}}">Register on EventBrite</a>
+{% endif %}
 
 **Description**  
  The format of this meeting is simple:
@@ -55,5 +57,6 @@ I hope to see you there!
 
 {{page.event.description | markdownify}}
 
+{% if page.event.eventbrite-id %}
 <a class="btn" title="EventBrite Registration" href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}" target="_blank">Register on EventBrite</a>
-
+{% endif %}
