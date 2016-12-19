@@ -24,9 +24,29 @@ task :watch do
   [jekyllPid].each { |pid| Process.wait(pid) }
 end # task :watch
 
-namespace :post do
+namespace :generate do
+  desc "Generate new Lean Coffee event: lean_coffee['2017-01-01']"
+  task :lean_coffee, :date do | t, args |  
+    datestamp = Time.now.strftime('%F')
+    # publish 20 days before the event
+    event_date = Date.parse(args[:date])
+    publish_date = event_date - 20
+    puts "Publish Date: #{publish_date}"
+
+    event_month_name = event_date.strftime("%B")
+    puts "Event Month: #{event_month_name}"
+    post_filename = "_drafts/#{publish_date}-lean-coffee-#{event_month_name}.md"
+
+    template = File.read('_templates/lean-coffee-template.md')
+    post = template.gsub(/\{\{month\}\}/, event_month_name)
+    .gsub(/\{\{date\}\}/, args[:date])
+    File.open(post_filename, "w") { | f | f.puts post }
+    
+    puts "Created Draft at #{post_filename}"
+  end
+
   desc "Generate new post"
-  task :generate, :post_title, :date, :time do | t, args |
+  task :post, :post_title, :date, :time do | t, args |
     datestamp = Time.now.strftime('%F')
     post_filename = build_target_filename(datestamp, args[:post_title])
 
