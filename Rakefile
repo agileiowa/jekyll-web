@@ -13,7 +13,7 @@ desc "Watch the site and regenerate when it changes"
 task :watch do
   puts "Starting to watch source with Jekyll..."
   #system "sass --update _sass:css -f -l -r ./_sass/bourbon/lib/bourbon.rb"
-  jekyllPid = Process.spawn("jekyll serve --watch")
+  jekyllPid = Process.spawn("jekyll serve --watch --future")
   #sassPid = Process.spawn("sass --watch _sass:css -l -r ./_sass/bourbon/lib/bourbon.rb")
 
   trap("INT") {

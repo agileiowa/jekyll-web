@@ -15,32 +15,26 @@ layout: base
 
 
 <article class="container">
-{% for post in paginator.posts %}
-  {% unless post.draft %}
+
+{% assign curDate = site.time | date: '%s' %}
+{% for post in site.categories.events reversed %}
+    {% assign postStartDate = post.event.date | date: '%s' %}
+    {% if postStartDate >= curDate %}
+    <!-- Page content goes here --> 
     <section class="index">
-        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
-        <div>
-            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <p>{{ post.content }}</p>
-            <div class="meta">
-                <!--Written By <address>{{ post.author.name }}</address> &mdash;-->
-                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </div>
+      <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+      <div>
+        <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+        <p>{{ post.content }}</p>
+        <div class="meta">
+          <!--Written By <address>{{ post.author.name }}</address> &mdash;-->
+          <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
         </div>
-        <hr>
+      </div>
+      <hr>
     </section>
-    {% endunless %}
-    {% endfor %}
-    <section class="pagination" style="text-align:center">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">‹ Newer</a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
-        {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
-      {% endif %}
-    </section>
+    {% break %}
+    {% endif %}
+{% endfor %}
+
 </article>
