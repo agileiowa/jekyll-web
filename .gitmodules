@@ -1,4 +1,4 @@
 [submodule "_site"]
 	path = _site
-	url = git@github.com:agileiowa/jekyll-web.git
+	url = https://github.com/agileiowa/jekyll-web.git
 	branch = gh-pages
