@@ -4,7 +4,7 @@ title: "Lean Coffee - December"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-december-2017-tickets-32575596486
   date: 2017-12-21
   time: 7:00 AM to 8:30 AM
 

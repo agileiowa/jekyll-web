@@ -4,7 +4,7 @@ title: "Lean Coffee - June"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-june-2017-tickets-32575563387
   date: 2017-06-15
   time: 7:00 AM to 8:30 AM
 

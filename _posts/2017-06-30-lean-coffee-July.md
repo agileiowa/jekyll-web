@@ -4,7 +4,7 @@ title: "Lean Coffee - July"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-july-2017-tickets-32575566396
   date: 2017-07-20
   time: 7:00 AM to 8:30 AM
 

@@ -4,7 +4,7 @@ title: "Lean Coffee - November"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-november-2017-tickets-32575590468
   date: 2017-11-16
   time: 7:00 AM to 8:30 AM
 

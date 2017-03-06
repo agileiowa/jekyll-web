@@ -4,7 +4,7 @@ title: "Lean Coffee - August"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-august-2017-tickets-32575571411
   date: 2017-08-17
   time: 7:00 AM to 8:30 AM
 

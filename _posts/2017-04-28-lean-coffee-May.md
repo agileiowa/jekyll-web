@@ -4,7 +4,7 @@ title: "Lean Coffee - May"
 categories: events leancoffee
 event:
   facebook-id: 
-  eventbrite-id:
+  eventbrite-id: lean-coffee-may-2017-tickets-32575559375
   date: 2017-05-18
   time: 7:00 AM to 8:30 AM
 
