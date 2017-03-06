@@ -69,19 +69,25 @@ namespace :generate do
     system "start #{post_filename}" if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM)
   end
 end
+
 namespace :site do
   desc "Generate blog files"
   task :generate do
     Jekyll::Site.new(Jekyll.configuration({
       "source"      => ".",
-      "destination" => "_site"
+      "destination" => "_site",
+      "exclude" => ["Rakefile"]
     })).process
   end
 
   task :check do
       if (has_unpushed_commits())
-          puts "\e[31mYou have un-pushed changes. NO PUBLISH FOR YOU!!\e[0m"
-          exit 0
+        puts "\e[31mYou have un-pushed changes. NO PUBLISH FOR YOU!!\e[0m"
+        exit 0
+      end
+      if (not_master_branch())
+        puts "\e[31mYou need to be on the master branch. NO PUBLISH FOR YOU!!\e[0m"
+        exit 0
       end
   end
 
@@ -91,17 +97,35 @@ namespace :site do
     (status =~ /\[ahead \d{1,}\]/)
   end
 
-  desc "Generate and publish blog to gh-pages"
-  task :publish => [:check, :generate] do
-    Dir.mktmpdir do |tmp|
-      cp_r "_site/.", tmp
-      Dir.chdir tmp
-      system "git init"
-      system "git add ."
-      message = "Site updated at #{Time.now.utc}"
-      system "git commit -m #{message.inspect}"
-      system "git remote add origin https://github.com/#{GITHUB_REPONAME}.git"
-      system "git push origin master:refs/heads/gh-pages --force"
-    end
+  def not_master_branch()
+    current_branch = `git rev-parse --abbrev-ref HEAD`
+    (current_branch == 'master')
   end
+
+  desc "Generate and publish blog to gh-pages"
+  task :publish => [:check] do
+      system "git submodule update --init"
+
+      Dir.chdir("_site/") do
+          `git status`
+          `git checkout gh-pages`
+      end 
+
+      FileUtils.rm_r Dir.glob('_site/*')
+
+      Rake::Task['site:generate'].invoke
+
+      Dir.chdir("_site/") do
+          `git status`
+          `git add .`
+          message = "Site updated at #{Time.now.utc}"
+          `git commit -m #{message.inspect}`
+          system "git push origin gh-pages"
+      end
+
+      `git add .`
+      `git commit -m "update _site for publish"`
+      `git push origin master`
+  end
+
 end
