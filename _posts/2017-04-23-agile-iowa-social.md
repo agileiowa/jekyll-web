@@ -4,7 +4,7 @@ title: "Agile Iowa Social - May"
 categories: events
 event:
   facebook-id: 
-  eventbrite-id:agile-iowa-social-may-2017-tickets-33979698192
+  eventbrite-id: agile-iowa-social-may-2017-tickets-33979698192
   date: 2017-05-09
   time: 4:30 PM to 8:00 PM
 
