@@ -70,6 +70,8 @@ namespace :generate do
   end
 end
 
+
+
 namespace :site do
   desc "Generate blog files"
   task :generate do
