@@ -78,6 +78,8 @@ namespace :site do
       "destination" => "_site",
       "exclude" => ["Rakefile"]
     })).process
+
+    exec('htmlproofer ./_site --disable-external')
   end
 
   task :check do

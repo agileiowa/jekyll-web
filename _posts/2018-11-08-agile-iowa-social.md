@@ -40,7 +40,7 @@ event:
   {{page.event.location.instructions}}
 {% endif %}
 
-<a class="btn" title="EventBrite Registration"  href="https://www.eventbrite.com/e/agile-iowa-social-november-2018-tickets-51480275891" target="_blank" data-eventdate="{{page.event.date | date: '%D'}}">Register on EventBrite</a>
+<a class="btn" title="EventBrite Registration"  href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}" target="_blank" data-eventdate="{{page.event.date | date: '%D'}}">Register on EventBrite</a>
 
 **Description**  
  The format of this meeting is simple:
@@ -53,4 +53,4 @@ I hope to see you there!
 
 {{page.event.description | markdownify}}
 
-<a class="btn" title="EventBrite Registration" href="agile-iowa-social-november-2018-tickets-51480275891" target="_blank">Register on EventBrite</a>
+<a class="btn" title="EventBrite Registration" href="http://www.eventbrite.com/e/{{page.event.eventbrite-id}}" target="_blank">Register on EventBrite</a>
