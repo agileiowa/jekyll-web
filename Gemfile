@@ -2,12 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.5'
 
-gem 'safe_yaml', '~>1.0.4'
-gem 'jekyll', '1.5.1'
-gem 'jekyll-assets', '0.7.7'
-gem 'maruku', '0.7.0'
+gem "jekyll", ">= 3.6.3"
+gem "jekyll-assets", group: :jekyll_plugins
 gem 'rake', '10.4.2'
-gem 'sass', '3.3.6'
-gem 'uglifier', '2.5.0'
-gem 'github-pages', '17'
+gem 'github-pages', group: :jekyll_plugins
 gem "html-proofer"
