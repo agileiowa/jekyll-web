@@ -106,17 +106,28 @@ namespace :site do
 
   desc "Generate and publish blog to gh-pages"
   task :publish => [:check] do
+      puts 'INFO: Removing any pending changes from _site/ directory'
+      Dir.chdir("_site/") do
+          `git reset HEAD --hard`
+          `git clean -fd`
+      end
+      
+      puts 'INFO: Reseting the _site submodule' 
       system "git submodule update --init"
 
+      puts 'INFO: Checking out gh-pages branch in _sites'
       Dir.chdir("_site/") do
           `git status`
           `git checkout gh-pages`
       end 
 
+      puts 'INFO: Deleting the _site/ directory'
       FileUtils.rm_r Dir.glob('_site/*')
 
+      puts 'INFO: Generating content to _site directory'
       Rake::Task['site:generate'].invoke
 
+      puts 'INFO: Create git commit and push to gh-pages branch'
       Dir.chdir("_site/") do
           `git status`
           `git add .`
@@ -125,6 +136,7 @@ namespace :site do
           system "git push origin gh-pages"
       end
 
+      puts 'INFO: Create commit for master branch that includes updated submodule reference'
       `git add .`
       `git commit -m "update _site for publish"`
       `git push origin master`
