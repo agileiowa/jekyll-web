@@ -3,6 +3,7 @@ require "tmpdir"
 
 require "bundler/setup"
 require "jekyll"
+require 'html-proofer'
 
 # Change your GitHub reponame eg. "kippt/jekyll-incorporated"
 GITHUB_REPONAME = "agileiowa/jekyll-web"
@@ -79,7 +80,8 @@ namespace :site do
       "exclude" => ["Rakefile"]
     })).process
 
-    exec('htmlproofer ./_site --disable-external')
+    options = { :disable_external => true }
+    HTMLProofer.check_directory("./_site", options).run
   end
 
   task :check do
